@@ -8,11 +8,20 @@ function Square({ value, onSquareClick }) {
 }
 
 export default function Board () {
+  const [turn, setTurn] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
     const nextSquares = squares.slice();  // Create a copy of the squares array
-    nextSquares[i] = "X"; 
+    if (turn)
+    {
+      nextSquares[i] = "X"; 
+    }
+    else
+    {
+      nextSquares[i] = "O";
+    }
+    setTurn(!turn);
     setSquares(nextSquares);  // lets React know the state of component has changed
   }
 
