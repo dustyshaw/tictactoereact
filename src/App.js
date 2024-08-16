@@ -1,26 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+
+export default function Board () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>Hello World</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div>
+        <button className="square">X</button>
+        <button className="square">X</button>
+        <button className="square">X</button>
+      </div>
+      <div>
+        <button className="square">X</button>
+        <button className="square">X</button>
+        <button className="square">X</button>
+      </div>
+      <div>
+        <button className="square">X</button>
+        <button className="square">X</button>
+        <button className="square">X</button>
+      </div>
+    </>
+);
 }
 
-export default App;
+
